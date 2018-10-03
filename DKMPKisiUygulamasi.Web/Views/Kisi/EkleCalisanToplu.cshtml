@@ -1,0 +1,377 @@
+﻿@model DKMPKisiUygulamasi.CakmaWCF.Mesajlar.Somut.Yanit.IlklendirEkleCalisanIletisimGorevEgitimViewModel
+
+@{
+    ViewBag.Title = "Çalışan Ekleme";
+}
+
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>*@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+
+
+<h2>Çalışan Ekleme Sayfası</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Bu sayfada çalışan bilgilerini ekleyebilirsiniz.</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div id="accordion">
+            <h3 class="myDiv">Temel Bilgiler</h3>
+            <div>
+                <div>
+                    @Html.LabelFor(model => model.AkademikUnvaniId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.AkademikUnvaniId, Model.AkademikListe, new { @class = "control-label col-md-2" })
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.Adi, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Adi, new { htmlAttributes = new { @class = "form-control input_camel" } })
+                        @Html.ValidationMessageFor(model => model.Adi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.Soyadi, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Soyadi, new { htmlAttributes = new { @class = "form-control input_capital" } })
+                        @Html.ValidationMessageFor(model => model.Soyadi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <h3 class="myDiv">Biyolojik Veriler</h3>
+            <div class="form-group">
+                <div>
+                    @Html.LabelFor(model => model.CinsId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.CinsId, Model.CinsiyetListe, new { @class = "control-label col-md-2", @for = "dropdownF" })
+                    </div>
+                    <br />
+                </div>
+                <div id="divKizlikSoyadi" style="visibility:collapse">
+                    @Html.LabelFor(model => model.KizlikSoyadi, htmlAttributes: new { @class = "control-label col-md-2 input_camel" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.KizlikSoyadi, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.KizlikSoyadi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.KaninGrubuId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.KaninGrubuId, Model.KanGrubuListe, new { @class = "control-label col-md-2" })
+                    </div>
+                    <br />
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.PhDegerId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.PhDegerId, Model.PhListe, new { @class = "control-label col-md-2" })
+                    </div>
+                    <br />
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.MedeniHaliId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.MedeniHaliId, Model.MedeniDurumuListe, new { @class = "control-label col-md-2" })
+                    </div>
+                    <br />
+                </div>
+            </div>
+            <h3 class="myDiv">Resmi Veriler</h3>
+            <div class="form-group">
+
+                <div>
+                    @Html.LabelFor(model => model.TurCumKimlikNo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TurCumKimlikNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TurCumKimlikNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div>
+                    @Html.LabelFor(model => model.DogumTarihi, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DogumTarihi, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DogumTarihi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div>
+                    @Html.LabelFor(model => model.SicilNo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SicilNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SicilNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.Aciklama, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Aciklama, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Aciklama, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <h3 class="myDiv">İletişim Verileri</h3>
+            <div class="form-group">
+                <div>
+                    @Html.LabelFor(model => model.Dahili, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Dahili, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Dahili, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div>
+                    @Html.LabelFor(model => model.CepTelefonu, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CepTelefonu, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CepTelefonu, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.BakanlikEPosta, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.BakanlikEPosta, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.BakanlikEPosta, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.GmailEPosta, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.GmailEPosta, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.GmailEPosta, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            </div>
+            <h3 class="myDiv">Görev & Ünvan Verileri</h3>
+            <div class="form-group">
+                <div>
+                    @Html.LabelFor(model => model.KadroDurumuId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.KadroDurumuId, Model.KadrosuListe, new { @class = "control-label col-md-2" })
+
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.SinifiId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.SinifiId, Model.SinifListe, new { @class = "control-label col-md-2" })
+
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.EsCalismaDurumuId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.EsCalismaDurumuId, Model.CalismaDurumuListe, new { @class = "control-label col-md-2" })
+
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.UnvanId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.UnvanId, Model.UnvanListe, new { @class = "control-label col-md-2" })
+
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.GorevId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.GorevId, Model.GorevListe, new { @class = "control-label col-md-2" })
+
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.BirimId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.BirimId, Model.BirimListe, new { @class = "control-label col-md-2" })
+
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.IlId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.IlId, Model.IlListe, new { @class = "control-label col-md-2" })
+
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.Baslangic, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Baslangic, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Baslangic, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.AsilMi, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.CheckBoxFor(model => model.AsilMi, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AsilMi, "", new { @class = "text-danger" })
+                    </div>
+                    @Html.LabelFor(model => model.ResmiMi, htmlAttributes: new { @class = "control-label col-md-2", @style = "left: 1px;" })
+                    <div class="col-md-10">
+                        @Html.CheckBoxFor(model => model.ResmiMi, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ResmiMi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+            </div>
+            <h3 class="myDiv">Öğrenim Verileri</h3>
+            <div>
+                <div>
+                    @Html.LabelFor(model => model.OgrenimDurumuId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(n => n.OgrenimDurumuId, Model.OgrenimDurumuListe, new { @class = "control-label col-md-2", @for = "dropdownF" })
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Çalışan Oluştur" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Geri Dön", "Index")
+</div>
+
+
+
+<script>
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+    $("#dropdownF").selectmenu();
+    $("#DogumTarihi").datepicker({
+        changeMonth:true,
+        changeYear: true,
+        locale:'tr'
+    });
+
+    $("#Baslangic").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        locale: 'tr'
+    });
+
+
+
+  });
+
+  $("#CinsId > option").each(function () {
+      if (this.value == '-9') {
+          var att = document.createAttribute("disabled");       // Create a "class" attribute
+          this.setAttributeNode(att);
+      }
+  });
+
+  $("#KaninGrubuId > option").each(function () {
+      if (this.value == '-9')
+      {
+          var att = document.createAttribute("disabled");       // Create a "class" attribute
+          this.setAttributeNode(att);
+      }
+  });
+
+  $("#PhDegerId > option").each(function () {
+      if (this.value == '-9') {
+          var att = document.createAttribute("disabled");       // Create a "class" attribute
+          this.setAttributeNode(att);
+      }
+  });
+
+  $("#MedeniHaliId > option").each(function () {
+      if (this.value == '-9') {
+          var att = document.createAttribute("disabled");       // Create a "class" attribute
+          this.setAttributeNode(att);
+      }
+  });
+
+  $('.input_capital').on('input', function (evt) {
+      $(this).val(function (_, val) {
+          return val.toUpperCase();
+      });
+  });
+
+
+  $('.input_camel').on('input', function (evt) {
+      $(this).val(function (_, val) {
+          return val.turkishCapitalizeWords();
+      });
+  });
+
+  String.prototype.turkishUpperCase = function () {
+      return this.replace(/ğ/g, 'Ğ')
+          .replace(/ü/g, 'Ü')
+          .replace(/ş/g, 'Ş')
+          .replace(/ı/g, 'I')
+          .replace(/i/g, 'İ')
+          .replace(/ö/g, 'Ö')
+          .replace(/ç/g, 'Ç')
+          .toUpperCase();
+  };//String.turkishUpperCase
+
+  String.prototype.turkishLowerCase = function () {
+      return this.replace(/Ğ/g, 'ğ')
+          .replace(/Ü/g, 'ü')
+          .replace(/Ş/g, 'ş')
+          .replace(/I/g, 'ı')
+          .replace(/İ/g, 'i')
+          .replace(/Ö/g, 'ö')
+          .replace(/Ç/g, 'ç')
+          .toLowerCase();
+  };//String.turkishLowerCase
+
+  String.prototype.turkishCapitalize = function () {
+      return this.charAt(0).turkishUpperCase() + this.slice(1).turkishLowerCase()
+  };//String.turkishCapitalize
+
+  String.prototype.turkishCapitalizeWords = function () {
+      var a = this.split(' ');
+      for (var i = 0; i < a.length; i++) a[i] = a[i].turkishCapitalize();
+      return a.join(' ');
+  };//String.turkishCapitalizeWords
+
+  $("#CinsId").change(function () {
+      var end = this.value;
+      console.log(end);
+
+      if (end == '3')
+      {
+          $("#divKizlikSoyadi").css('visibility', 'visible');
+      } else {
+          $("#divKizlikSoyadi").css('visibility', 'collapse');
+      }
+
+  });
+
+
+</script>
+
+<style>
+    .myDiv {
+        /*width:100%;
+        height:90%;*/
+        background: Aqua;
+    }
+
+
+    .ui-datepicker {
+        background: #333;
+        border: 1px solid #555;
+        color: #EEE;
+        font-size: 120%;
+    }
+</style>

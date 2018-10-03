@@ -1,0 +1,104 @@
+﻿@model IEnumerable<DKMPKisiUygulamasi.CakmaWCF.ViewModelKlasor.Somut.VarlikKlasor.RaporKlasor.CalisanOzetViewModel>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdiSoyadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SicilNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Unvani)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gorevi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OgrenimAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DogumTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KidemYiliSozce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KanGrubuveRh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DahiliSozce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BakanlikEpostaSozce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CepTelefonuSozce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GoreveBaslamaTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TCKimlikNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sinifi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birimi)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdiSoyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SicilNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unvani)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gorevi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OgrenimAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogumTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KidemYiliSozce)
+            </td>         
+            <td>
+                @Html.DisplayFor(modelItem => item.KanGrubuveRh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DahiliSozce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BakanlikEpostaSozce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CepTelefonuSozce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoreveBaslamaTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TCKimlikNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sinifi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birimi)
+            </td>         
+        </tr>
+    }
+
+</table>

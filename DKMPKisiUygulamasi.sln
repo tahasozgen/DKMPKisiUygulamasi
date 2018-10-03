@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKMPKisiUygulamasi.Model", "DKMPKisiUygulamasi.Model\DKMPKisiUygulamasi.Model.csproj", "{EEC9CF3E-A63E-4AEF-86BE-D8E2D3050284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKMPKisiUygulamasi.Servis", "DKMPKisiUygulamasi.Servis\DKMPKisiUygulamasi.Servis.csproj", "{88DCDB93-6FB0-40F2-A45B-F8C94207C28B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKMPKisiUygulamasi.Repository", "DKMPKisiUygulamasi.Repository\DKMPKisiUygulamasi.Repository.csproj", "{9F478F06-3F6A-4A6E-98C5-03F0350ACCA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKMPKisiUygulamasi.BirimTesti", "DKMPKisiUygulamasi.BirimTesti\DKMPKisiUygulamasi.BirimTesti.csproj", "{72E34439-DF3E-4B0C-9894-18DCDA7CB533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKMPKisiUygulamasi.CakmaWCF", "DKMPKisiUygulamasi.CakmaWCF\DKMPKisiUygulamasi.CakmaWCF.csproj", "{A1C3A2A6-CC60-456F-B1DE-A6BE25B071C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DKMPKisiUygulamasi.Web", "DKMPKisiUygulamasi.Web\DKMPKisiUygulamasi.Web.csproj", "{A384A6AE-A3B1-4AEA-8717-D05FDC51B2BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEC9CF3E-A63E-4AEF-86BE-D8E2D3050284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC9CF3E-A63E-4AEF-86BE-D8E2D3050284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC9CF3E-A63E-4AEF-86BE-D8E2D3050284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC9CF3E-A63E-4AEF-86BE-D8E2D3050284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DCDB93-6FB0-40F2-A45B-F8C94207C28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DCDB93-6FB0-40F2-A45B-F8C94207C28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DCDB93-6FB0-40F2-A45B-F8C94207C28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DCDB93-6FB0-40F2-A45B-F8C94207C28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F478F06-3F6A-4A6E-98C5-03F0350ACCA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F478F06-3F6A-4A6E-98C5-03F0350ACCA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F478F06-3F6A-4A6E-98C5-03F0350ACCA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F478F06-3F6A-4A6E-98C5-03F0350ACCA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E34439-DF3E-4B0C-9894-18DCDA7CB533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E34439-DF3E-4B0C-9894-18DCDA7CB533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E34439-DF3E-4B0C-9894-18DCDA7CB533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E34439-DF3E-4B0C-9894-18DCDA7CB533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C3A2A6-CC60-456F-B1DE-A6BE25B071C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C3A2A6-CC60-456F-B1DE-A6BE25B071C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C3A2A6-CC60-456F-B1DE-A6BE25B071C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C3A2A6-CC60-456F-B1DE-A6BE25B071C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A384A6AE-A3B1-4AEA-8717-D05FDC51B2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A384A6AE-A3B1-4AEA-8717-D05FDC51B2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A384A6AE-A3B1-4AEA-8717-D05FDC51B2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A384A6AE-A3B1-4AEA-8717-D05FDC51B2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01A123C8-38D0-42FA-BCD4-3412DCF0FCF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DKMPKisiUygulamasi.Presentation</RootNamespace>
+    <AssemblyName>DKMPKisiUygulamasi.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DKMPHataAltyapi, Version=1.0.0.4, Culture=neutral, PublicKeyToken=c4ab832898a2a549, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DKMPHataAltyapi.dll</HintPath>
+    </Reference>
+    <Reference Include="DKMPKurumCografyaUygulamasi.Servis">
+      <HintPath>..\lib\DKMPKurumCografyaUygulamasi.Servis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\AkademikUnvaniResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\CalismaDurumuResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\CinsiyetiResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\EgitimDuzeyiResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\HizmetSonlanisNedeniResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\KadrosuResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\KanGrubuResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\MedeniDurumuResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\PhDegeriResolver.cs" />
+    <Compile Include="AltyapiKlasoru\CevirmeKlasoru\ResolverKlasoru\SinifResolver.cs" />
+    <Compile Include="Mesajlar\Somut\Istek\GetirCalisanOzetIstekViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Istek\GetirCalisanRaporBirIstekViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Istek\IlklendirCalisanEkleIstekViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Istek\IlklendirCalisanGorevlendirmeIstekViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Istek\SorgulaCalisanIstekViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Istek\SorgulaGorevlendirCalisanIstekViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Yanit\EkleCalisanIletisimGorevEgitimYanitViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Yanit\GetirCalisanOzetYanitViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Yanit\GetirCalisanRaporBirYanitViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Yanit\IlklendirCalisanEkleYanitViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Yanit\IlklendirCalisanGorevlendirmeYanitViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Yanit\SorgulaCalisanYanitViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Yanit\SorgulaGorevlendirCalisanYanitViewModel.cs" />
+    <Compile Include="Mesajlar\Soyut\IstekBazViewModel.cs" />
+    <Compile Include="Mesajlar\Soyut\SorguYanitBaz.cs" />
+    <Compile Include="Mesajlar\Soyut\TransactionYanitBaz.cs" />
+    <Compile Include="Mesajlar\Soyut\YanitBaz.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Somut\Arac.cs" />
+    <Compile Include="Somut\CalisanPresentation.cs" />
+    <Compile Include="Somut\Cevir.cs" />
+    <Compile Include="Somut\GorevlendirmePresentation.cs" />
+    <Compile Include="Somut\HataPresentation.cs" />
+    <Compile Include="Somut\Kontrol.cs" />
+    <Compile Include="Somut\TanimlayiciVarlikPresentation.cs" />
+    <Compile Include="Somut\TopluIslemPresentation.cs" />
+    <Compile Include="Soyut\ICalisanPresentation.cs" />
+    <Compile Include="Soyut\IGorevlendirmePresentation.cs" />
+    <Compile Include="Soyut\IHataPresentation.cs" />
+    <Compile Include="Soyut\ITanimlayiciVarlikPresentation.cs" />
+    <Compile Include="Soyut\ITopluIslemPresentation.cs" />
+    <Compile Include="Soyut\PresentationBaz.cs" />
+    <Compile Include="ViewModelKlasor\Somut\IslemKlasor\EkleCalisanIletisimGorevEgitimViewModel.cs" />
+    <Compile Include="Mesajlar\Somut\Yanit\IlklendirEkleCalisanIletisimGorevEgitimViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\GorevKlasoru\CalisanGorevlendirmeViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\GorevKlasoru\GoreviViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\GorevKlasoru\HizmetSonlanisNedeniViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiIletisimKlasor\IletisimTuruViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiIletisimKlasor\KisiIletisimViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\AkademikUnvaniViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\AkrabalikDurumuViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\CalisanViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\CalismaDurumuViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\CinsiyetiViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\KadrosuViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\KanGrubuViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\KisiOgrenimViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\KisiViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\MedeniDurumuViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\PhDegeriViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\KisiKlasor\SinifViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\RaporKlasor\CalisanOzetViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\RaporKlasor\CalisanRaporBirViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\RaporKlasor\CalisanRaporDortViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\RaporKlasor\CalisanRaporUcViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\TanimlayiciKlasor\EgitimDuzeyiViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\TanimlayiciKlasor\OgrenimDurumuViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\TanimlayiciKlasor\UniversiteViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\VarlikKlasor\TanimlayiciKlasor\UnvanViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Soyut\CalisanRaporSayiViewModelBaz.cs" />
+    <Compile Include="ViewModelKlasor\Soyut\IslemBazViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Soyut\SozlukViewModel.cs" />
+    <Compile Include="ViewModelKlasor\Somut\IslemKlasor\TransactionYanitViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DKMPKisiUygulamasi.Model\DKMPKisiUygulamasi.Model.csproj">
+      <Project>{eec9cf3e-a63e-4aef-86be-d8e2d3050284}</Project>
+      <Name>DKMPKisiUygulamasi.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DKMPKisiUygulamasi.Servis\DKMPKisiUygulamasi.Servis.csproj">
+      <Project>{88dcdb93-6fb0-40f2-a45b-f8c94207c28b}</Project>
+      <Name>DKMPKisiUygulamasi.Servis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEC9CF3E-A63E-4AEF-86BE-D8E2D3050284}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DKMPKisiUygulamasi.Model</RootNamespace>
+    <AssemblyName>DKMPKisiUygulamasi.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DKMPHataAltyapi">
+      <HintPath>..\lib\DKMPHataAltyapi.dll</HintPath>
+    </Reference>
+    <Reference Include="DKMPKurumCografyaUygulamasi.Model">
+      <HintPath>..\lib\DKMPKurumCografyaUygulamasi.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="DKMPKurumCografyaUygulamasi.Repository">
+      <HintPath>..\lib\DKMPKurumCografyaUygulamasi.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="DKMPKurumCografyaUygulamasi.Servis">
+      <HintPath>..\lib\DKMPKurumCografyaUygulamasi.Servis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnumKlasoru\AkademikUnvani.cs" />
+    <Compile Include="EnumKlasoru\AkrabalikDurumu.cs" />
+    <Compile Include="EnumKlasoru\CalismaDurumu.cs" />
+    <Compile Include="EnumKlasoru\Cinsiyeti.cs" />
+    <Compile Include="EnumKlasoru\EgitimDuzeyi.cs" />
+    <Compile Include="EnumKlasoru\EmeklilikDerecesi.cs" />
+    <Compile Include="EnumKlasoru\HizmetSonlanisNedeni.cs" />
+    <Compile Include="EnumKlasoru\IletisimTuru.cs" />
+    <Compile Include="EnumKlasoru\IzinTuru.cs" />
+    <Compile Include="EnumKlasoru\Kadrosu.cs" />
+    <Compile Include="EnumKlasoru\KanGrubu.cs" />
+    <Compile Include="EnumKlasoru\KazanilanHakAyligiDerecesi.cs" />
+    <Compile Include="EnumKlasoru\MedeniDurumu.cs" />
+    <Compile Include="EnumKlasoru\RhDegeri.cs" />
+    <Compile Include="EnumKlasoru\Sinif.cs" />
+    <Compile Include="EnumKlasoru\SorguNitelik.cs" />
+    <Compile Include="IsKatmani\Somut\Arac.cs" />
+    <Compile Include="IsKatmani\Somut\CalisanIsKurali.cs" />
+    <Compile Include="IsKatmani\Somut\GorevlendirmeIsKurali.cs" />
+    <Compile Include="IsKatmani\Somut\HataIsKurali.cs" />
+    <Compile Include="IsKatmani\Somut\KisiIletisimIsKurali.cs" />
+    <Compile Include="IsKatmani\Somut\Kontrol.cs" />
+    <Compile Include="IsKatmani\Somut\OgrenimIsKurali.cs" />
+    <Compile Include="IsKatmani\Somut\TanimlayiciVarlikIsKurali.cs" />
+    <Compile Include="IsKatmani\Soyut\ICalisanIsKurali.cs" />
+    <Compile Include="IsKatmani\Soyut\IGorevlendirmeIsKurali.cs" />
+    <Compile Include="IsKatmani\Soyut\IKisiIletisimIsKurali.cs" />
+    <Compile Include="IsKatmani\Soyut\IOgrenimIsKurali.cs" />
+    <Compile Include="IsKatmani\Soyut\ITanimlayiciVarlikIsKurali.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryKlasoru\ICalisanGorevRepository.cs" />
+    <Compile Include="RepositoryKlasoru\ICalisanRepository.cs" />
+    <Compile Include="RepositoryKlasoru\IGorevRepository.cs" />
+    <Compile Include="RepositoryKlasoru\IKisiIletisimRepository.cs" />
+    <Compile Include="RepositoryKlasoru\IKisiOgrenimRepository.cs" />
+    <Compile Include="RepositoryKlasoru\IOgrenimDurumuRepository.cs" />
+    <Compile Include="RepositoryKlasoru\IUnitOfWork.cs" />
+    <Compile Include="RepositoryKlasoru\IUnvanRepository.cs" />
+    <Compile Include="SabitlerMesajlar\Sabitler.cs" />
+    <Compile Include="Somut\GorevKlasoru\CalisanGorevlendirme.cs" />
+    <Compile Include="Somut\GorevKlasoru\Gorevi.cs" />
+    <Compile Include="Somut\HataKlasoru\BosReferansHatasi.cs" />
+    <Compile Include="Somut\HataKlasoru\IslemBasarisizHatasi.cs" />
+    <Compile Include="Somut\IzinKlasoru\Izin.cs" />
+    <Compile Include="Somut\OgrenimKlasor\KisiOgrenim.cs" />
+    <Compile Include="Somut\RaporKlasor\CalisanOzet.cs" />
+    <Compile Include="Somut\KisiKlasor\Calisan.cs" />
+    <Compile Include="Somut\KisiKlasor\Kisi.cs" />
+    <Compile Include="Somut\RaporKlasor\CalisanRaporBir.cs" />
+    <Compile Include="Somut\RaporKlasor\CalisanRaporDort.cs" />
+    <Compile Include="Somut\RaporKlasor\CalisanRaporUc.cs" />
+    <Compile Include="Somut\IletisimKlasor\KisiIletisim.cs" />
+    <Compile Include="Somut\SorguKlasor\Ozdeyis.cs" />
+    <Compile Include="Somut\SorguKlasor\SorguAnaliz.cs" />
+    <Compile Include="Somut\OgrenimKlasor\Universite.cs" />
+    <Compile Include="Somut\TanimlayiciKlasor\Unvan.cs" />
+    <Compile Include="Somut\OgrenimKlasor\OgrenimDurumu.cs" />
+    <Compile Include="Soyut\CalisanKlasor\CalisanRaporSayiBaz.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
