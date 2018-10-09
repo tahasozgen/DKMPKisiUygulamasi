@@ -82,6 +82,7 @@
     <Compile Include="Altyapi\CevirmeKlasoru\ResolverKlasoru\SinifResolver.cs" />
     <Compile Include="Altyapi\NesneFabrikasi.cs" />
     <Compile Include="Altyapi\NorthwindContextSingleton.cs" />
+    <Compile Include="Deneme.cs" />
     <Compile Include="Mesajlar\Somut\Istek\GetirCalisanOzetIstekViewModel.cs" />
     <Compile Include="Mesajlar\Somut\Istek\GetirCalisanRaporBirIstekViewModel.cs" />
     <Compile Include="Mesajlar\Somut\Istek\IlklendirCalisanEkleIstekViewModel.cs" />
